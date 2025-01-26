@@ -1,0 +1,36 @@
+skin_cancer_diagnosis/
+│
+├── data/
+│   ├── raw/                 # Datos sin procesar (originales, ISIC, Fitzpatrick 17k)
+│   ├── processed/           # Datos preprocesados (escalados, normalizados)
+│   ├── splits/              # Divisiones de datos (entrenamiento, validación, prueba)
+│   ├── metadata.csv         # Metadatos de las imágenes (edad, sexo, localización, etc.)
+│
+├── models/
+│   ├── checkpoints/         # Puntos de control del modelo durante el entrenamiento
+│   ├── final_model.h5       # Modelo final entrenado
+│   ├── model_architecture.json # Estructura del modelo en JSON (opcional)
+│
+├── notebooks/
+│   ├── data_analysis.ipynb  # Análisis exploratorio de datos
+│   ├── model_training.ipynb # Entrenamiento del modelo
+│   ├── evaluation.ipynb     # Evaluación y visualización de métricas
+│
+├── scripts/
+│   ├── preprocess_data.py   # Preprocesamiento de datos (normalización, aumentación)
+│   ├── train_model.py       # Entrenamiento del modelo
+│   ├── evaluate_model.py    # Evaluación del modelo en datos de prueba
+│   ├── utils.py             # Funciones auxiliares (cargar datos, métricas personalizadas)
+│
+├── outputs/
+│   ├── logs/                # Registros de entrenamiento (TensorBoard, métricas)
+│   ├── plots/               # Gráficas generadas (matriz de confusión, curvas ROC)
+│   ├── predictions.csv      # Predicciones generadas por el modelo
+│
+├── requirements.txt         # Lista de dependencias del proyecto
+├── README.md                # Descripción general del proyecto y cómo usarlo
+├── config.yaml              # Configuración global del proyecto (hiperparámetros, rutas)
+│
+└── tests/
+    ├── test_preprocessing.py # Pruebas de preprocesamiento
+    ├── test_model.py         # Pruebas unitarias para el modelo
